@@ -4,6 +4,7 @@ with import <nixpkgs> {}; {
 		src = ./.;
 		buildInputs = [ go ];
 		buildPhase = ''
+                        export GOCACHE=/tmp/
 			go build -o ./hello
 		'';
 		installPhase = ''
